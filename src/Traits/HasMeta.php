@@ -7,6 +7,7 @@ namespace KielD01\Traits;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
+use KielD01\Models\Meta;
 
 /**
  * Trait HasMeta
@@ -19,6 +20,6 @@ trait HasMeta
 	{
 		$metaMorph = $this->__get('metaMorphType') ?? config('laravel-meta.defaultMorph', 'morphOne');
 
-		return $this->{$metaMorph}(static::class, 'parent');
+		return $this->{$metaMorph}(Meta::class, 'parent');
 	}
 }

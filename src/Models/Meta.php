@@ -42,8 +42,12 @@ class Meta extends Model
 		return $this->morphTo();
 	}
 
-	public function setUuidAttribute(): void
+	public static function boot(): void
 	{
-		$this->setAttribute('uuid', Str::uuid());
+		static::creating(
+			static function (Meta $meta) {
+				$meta->uuid = Str::uuid();
+			}
+		);
 	}
 }
