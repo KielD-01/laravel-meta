@@ -28,6 +28,7 @@ class Meta extends Model
 	use SoftDeletes;
 
 	protected $primaryKey = 'uuid';
+	protected $keyType = 'string';
 	protected $casts = [
 		'parent_id' => 'integer',
 	];
