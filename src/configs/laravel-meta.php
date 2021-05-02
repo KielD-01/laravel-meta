@@ -8,4 +8,5 @@ return [
 			'name' => null,
 		],
 	],
+	'defaultMorph' => null,
 ];
