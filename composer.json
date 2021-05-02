@@ -1,0 +1,20 @@
+{
+	"name": "kield01/laravel-meta",
+	"description": "Laravel package for creating a Meta for Your pages and Model Entities",
+	"type": "library",
+	"require": {
+		"php": "^7.0",
+		"laravel/framework": "^7.0"
+	},
+	"authors": [
+		{
+			"name": "Roman Kozin",
+			"email": "romanko95.rk@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"KielD01\\": "src/"
+		}
+	}
+}
