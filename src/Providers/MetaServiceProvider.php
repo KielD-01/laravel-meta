@@ -28,7 +28,7 @@ class MetaServiceProvider extends ServiceProvider
 	{
 		$this->publishes(
 			[
-				self::PATHS['meta_config'] => $this->app->databasePath('migrations'),
+				self::PATHS['migration_path'] => $this->app->databasePath('migrations'),
 			]
 			,
 			'migrations'
