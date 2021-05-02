@@ -17,7 +17,7 @@ class MetaServiceProvider extends ServiceProvider
 			DIRECTORY_SEPARATOR.'migrations.'.
 			DIRECTORY_SEPARATOR,
 	];
-	
+
 	public function boot(): void
 	{
 		$this->loadConfig();
@@ -26,7 +26,13 @@ class MetaServiceProvider extends ServiceProvider
 
 	private function loadMigrations(): void
 	{
-		$this->loadMigrationsFrom(self::PATHS['migration_path']);
+		$this->publishes(
+			[
+				self::PATHS['meta_config'] => $this->app->databasePath('migrations'),
+			]
+			,
+			'migrations'
+		);
 	}
 
 	private function loadConfig(): void
