@@ -6,7 +6,7 @@ namespace KielD01\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
-class HasMeta
+trait HasMeta
 {
 	public function meta(): MorphTo
 	{
